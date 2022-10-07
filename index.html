@@ -184,6 +184,7 @@ background:white;
 position: absolute;
 bottom:130px;
 border-radius:10px;
+overflow: hidden;
 }
 .comment{
 height:100px;
@@ -213,11 +214,12 @@ border-right:none;
 width:100%;
 height:50%;
 background:;
-border:2px solid gray;
+border-top:2px solid gray;
 margin-bottom:20px;
 position: relative;
 border-radius:10px;
 overflow: auto;
+
 
 }
 .feedbackcomment{
@@ -232,6 +234,8 @@ margin-bottom:2%;
 display:flex;
 align-items: center;
 left:20px;
+border-radius:0 20px 20px 0;
+transition:1s ease-out;
 }
 .aboutcontainer{
 height:40%;
@@ -253,6 +257,48 @@ position: relative;
         display:flex;
         justify-content: center;
 }
+ .delete{
+position: absolute;
+background:red;
+font-size:10px;
+height:20px;
+width:40px;
+display:flex;
+align-items: center;
+justify-content: center;
+right:0px;
+border-radius:20px;
+padding:10px;
+
+
+}
+.jin{
+position: absolute;
+background:red;
+font-size:10px;
+height:20px;
+width:40px;
+display:flex;
+align-items: center;
+justify-content: center;
+right:0px;
+border-radius:20px;
+padding:10px;
+transition:4s ease-in;
+animation:sin 4s linear infinite;
+}
+@keyframes sin{
+0%{
+ background:red;
+}
+50%{
+ background:blue;
+}
+100%{
+background:red;
+}
+}
+
     </style>
     <div class="navbar">
         
@@ -279,6 +325,7 @@ position: relative;
            
         </div>
        <div class="commentC">
+       
         <textarea class="comment" placeholder="comment section..."></textarea><button class="commentB">SUBMIT</button>
         <h3 style="text-decoration: underline;">COMMENTS</h3>
        <div class="feedback ">  
@@ -297,20 +344,42 @@ position: relative;
          </div>
     </div>
     <script>
+   const commentC=document.querySelector(".commentC");
    const comment=document.querySelector(".comment");
    const commentB=document.querySelector(".commentB");
   const feedback=document.querySelector(".feedback");
 commentB.addEventListener("click",(e)=>{
-   if(comment.value !=""){
-   e.preventDefault();
-  
+  if(comment.value !=""){
+    e.preventDefault();
   let mql=document.createElement("div");
   mql.setAttribute("class","feedbackcomment");
   mql.textContent=comment.value;
   feedback.appendChild(mql);
+  let del=document.createElement("div");
+  del.innerHTML="REPORT";
+  del.setAttribute("class","delete");
+  mql.appendChild(del);
 }
+ var dels=document.getElementsByClassName("delete");
+  for(let i=0;i<dels.length;i++){
+   dels[i].addEventListener("click",()=>{
+     dels[i].parentNode.style.background="orange";
+     dels[i].parentNode.style.color="red";
+     dels[i].classList.add("jin"); 
+     dels[i].innerHTML="DELETE";
+      if(dels[i].innerHTML == "DELETE"){
+         dels[i].addEventListener("click",()=>{
+         dels[i].parentNode.remove();
+          });
+        }
+    
+  });
+  
+  }
   comment.value="";
+ 
 });
+
 </script>
 </body>
 </html>
