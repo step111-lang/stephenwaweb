@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +18,14 @@
         }
         body{
             width: 100%;
-            height: 100vh;
+            height:200vh;
             position: relative;
+            background:linear-gradient(lightblue,navy);
         }
         .navbar{
             max-height: 21%;
             width: 100%;
-            background: grey;
+            background:grey;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -33,35 +35,38 @@
             position: relative;
             width: 100%;
             float: left;
+         margin-left:0;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
            
         }
         ul .j a{
-            padding:20px;
+            padding:5%;
             outline: none;
+font-size:12px;
             text-decoration: none;
 
         }
         ul .j a:hover{
-            
+            height:inherit;
+           outline:none;
             background: pink;
-            border: 2px solid red;
+            border-bottom:2px solid red;
             font-weight: bold;
 
         }
-        .bo{
+        /*.bo{
             height: 100vh;
             width: 100%;
             position: relative;
             margin-top: 0px;
-        }
+        }*/
         
         .foot{
             position: absolute;
-            bottom: 0;
-            height: 120px;
+            
+            height:120px;
             width: 100%;
             background:rgb(104, 104, 192);
             bottom: 0;
@@ -76,17 +81,20 @@
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
         }
-        .inp{
+      ul .inp{
             position:relative;
-            height: 30px;
+            height: 25px;
             width: 50%;
+            font-weight: bold;
+        
+border:none;
             margin-right:0%;
             background:rgb(184, 169, 169) ;
             outline: none;
             font-size: 15px;
-            margin-left: 30px;
+            margin-left: -5%;
         }
-        .sd{
+       /* .sd{
             background: rebeccapurple;
             height: 80%;
             margin-top: ;
@@ -94,9 +102,9 @@
             position: absolute;
             margin-bottom: 0.3%;
             float: left;
-        }
-        .ms{
-            background-image:url("https://source.unsplash.com/500*400/?landform");
+        }*/
+        /*.ms{
+            background-image:url("https://i.ibb.co/6XbqwjD/menu.png");
            
            height:100% ;
            position: absolute;
@@ -104,9 +112,9 @@
            right: 0;
            top: 0%;
            
-        }
+        }*/
 
-        .side{
+       /* .side{
             height: 100%;
             width: 40%;
             display: flex;
@@ -114,9 +122,9 @@
             justify-content: center;
             background:rgb(41, 129, 148);
             border-right:2px solid rgb(23, 110, 177);
-        }
+        }*/
 .b2{
-    position: relative;
+    position: absolute;
     width: 35%;
     border-bottom: 2px solid rgb(42, 190, 49);
     border-top: 2px solid rgb(36, 126, 46);
@@ -124,24 +132,29 @@
     border-right: none;
     background: none;
     border-radius: 25px;
-    color: black;
+    color: lightblue;
     outline: none;
-    top: 90%;
-    margin:;
+    top: 70%;
+    margin-right:50%;
+    
 }.b1{
-    position: relative;
+    position: absolute;
     width: 35%;
     outline: none;
     color: black;
-    top: 90%;
-    margin:;border-bottom: 2px solid rgb(39, 36, 189);
+    top: 70%;
+   border-bottom: 2px solid rgb(39, 36, 189);
     border-top: 2px solid rgb(28, 157, 221);
     border-left: none;
     border-right: none;
     background: none;
     border-radius: 25px;
-    color: navy;
+    color: lightblue;
+margin-left:50%;
 
+}
+.bi a{
+color:lightblue;
 }
 
 .b2:hover{
@@ -164,44 +177,137 @@
     border-right: none;
     color: rgb(58, 216, 244);
 }
+.commentC{
+width:100%;
+height:25%;
+background:white;
+position: absolute;
+bottom:130px;
+border-radius:10px;
+}
+.comment{
+height:100px;
+width:60%;
+border:none;
+outline:none;
+border-radius:10px;
+background:lightgray;
+color:black;
+font-style:italic;
+font-weight:bold;
+position: relative;
+left:4px;
+margin-top:2%;
+}
+.commentB{
+position:relative;
+height:20px;
+weight:40px;
+top:-5px;
+margin-left:5px;
+border-top:black;
+border-left:none;
+border-right:none;
+}
+.feedback {
+width:100%;
+height:50%;
+background:;
+border:2px solid gray;
+margin-bottom:20px;
+position: relative;
+border-radius:10px;
+overflow: auto;
 
-
+}
+.feedbackcomment{
+weight:100%;
+margin-top:10px;
+border-radius:2px;
+font-weight:bold;
+font-style:italic;
+background:lightgray;
+left:10px;
+margin-bottom:2%;
+display:flex;
+align-items: center;
+left:20px;
+}
+.aboutcontainer{
+height:40%;
+width:100%;
+background: linear-gradient(lightgreen,navy);
+position: absolute;
+margin-top:0%;
+border-radius:0 0px 10px 10px;
+display:flex;
+border-bottom:none;
+color:black;
+justify-content: center;
+}
+.subc{
+position: relative;
+            margin: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        display:flex;
+        justify-content: center;
+}
     </style>
     <div class="navbar">
         
        <ul>
 
         <input placeholder="search......." class="inp">
-        <div class="j"><a href="#">HOME</a></div>
-        <div class="j"><a href="#">SERVICE</a></div>
-        <div class="j"><a href="#">ABOUT</a></div>
+        <div class="j"><a href="">HOME</a></div>
+        <div class="j"><a href="">SERVICE</a></div>
+        <div class="j"><a href="">ABOUT</a></div>
        </ul>
     </div>
-    <div class="bo">
-        <div class="sd">
-            <div class="side">
-                <h3>/*SERVER NOT RESPONDING*/</h3>
+    
+            
                 
-               
-            </div>
-            <div class="ms">
-                
-                <button class="b1" >telegram group</button>
-                <button class="b2"><a href="https://wa.me/2540794349600">whatsapp </a></button>
-            </div>
+        
+        <div class="aboutcontainer">
+           <div class="subc">
+          <h2 style="top:0;">CONTENT:</h2>
+          <h4>creating websites for the willing, modernizing the way of thinking and upgrading our way of living. </h4>
+          
+          </div>
+          <button class="b1" >telegram </button>
+                <button class="b2"><a style="color:lightblue; outline:none;" href="https://wa.me/2540794349600">whatsapp </a></button>
+           
         </div>
+       <div class="commentC">
+        <textarea class="comment" placeholder="comment section..."></textarea><button class="commentB">SUBMIT</button>
+        <h3 style="text-decoration: underline;">COMMENTS</h3>
+       <div class="feedback ">  
+      </div>
+       </div>
          <div class="foot">
           <div class="contt">
             <h3 style="margin-left:25%;color: rgb(17, 17, 95);">   ABOUT </h3>
           <h5 style="color:rgb(39, 39, 94)"> creating website for our customers </h5>
           <h5 style="margin-left:15%;"><label>contact:</label>0713465576</h5>
-          <h5 style="margin-left:15%;"  ><label>gmail:</label>stephep@gmail.com</h5>
+          <h5 style="margin-left:15%;"  ><label>gmail:</label>stephelp@gmail.com</h5>
           <h5 style="margin-left:15%;"   ><label>location:</label>Nairobi</h5>
           <h5 >#stephenwa#stephens#stephen's</h5>
           <h5 style="margin-left:15%;"  ></h5>
           </div>
          </div>
     </div>
-    
+    <script>
+   const comment=document.querySelector(".comment");
+   const commentB=document.querySelector(".commentB");
+  const feedback=document.querySelector(".feedback");
+commentB.addEventListener("click",()=>{
+  
+  let mql=document.createElement("div");
+  mql.setAttribute("class","feedbackcomment");
+  mql.textContent=comment.value;
+  feedback.appendChild(mql);
+  comment.value="";
+});
+</script>
 </body>
 </html>
