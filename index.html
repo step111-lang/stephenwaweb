@@ -300,12 +300,15 @@ position: relative;
    const comment=document.querySelector(".comment");
    const commentB=document.querySelector(".commentB");
   const feedback=document.querySelector(".feedback");
-commentB.addEventListener("click",()=>{
+commentB.addEventListener("click",(e)=>{
+   if(comment.value !=""){
+   e.preventDefault();
   
   let mql=document.createElement("div");
   mql.setAttribute("class","feedbackcomment");
   mql.textContent=comment.value;
   feedback.appendChild(mql);
+}
   comment.value="";
 });
 </script>
