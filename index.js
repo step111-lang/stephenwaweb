@@ -1,5 +1,4 @@
-
-   const profile=document.querySelector(".profile");
+const profile=document.querySelector(".profile");
 const wd=document.querySelector(".wd");
 const driver=document.querySelector(".driver");
 const data=document.querySelector(".data");
