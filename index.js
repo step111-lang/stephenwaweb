@@ -82,15 +82,15 @@ let r=10;
           }
     }
 for(let i=0;i<s.length;i++){
-  s[i].addEventListener("click",()=>{
+  s[i].addEventListener("click",(e)=>{
         let x=s[i].getElementsByClassName("context")[0];
-         let top=s[i].getElementsByClassName("drivers")[0];
+         let top=e.target.getElementsByClassName("drivers")[0];
         let y=s[i+1].getElementsByClassName("context")[0];
           let str=String(x.innerHTML);
           let j=Math.floor((Number(y.innerHTML) / Number(x.innerHTML))*100);
           let pk=Math.floor(Number(y.innerHTML)- Number(x.innerHTML));
           chanses.innerHTML=j;
-          driver.innerHTML=top.innerHTML;
+          driver.textContent=top.textContent;
          wd.innerHTML=pk;
        data.classList.add("datadup");
         
