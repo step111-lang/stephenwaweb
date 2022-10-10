@@ -1,6 +1,10 @@
 
    const profile=document.querySelector(".profile");
+const wd=document.querySelector(".wd");
+const driver=document.querySelector(".driver");
+const data=document.querySelector(".data");
    const btn=document.querySelector("#btn");
+   const chanses=document.querySelector(".chanses");
    const commentC=document.querySelector(".commentC");
    const comment=document.querySelector(".comment");
    const commentB=document.querySelector(".commentB");
@@ -51,12 +55,16 @@ function time(){
      let y=s[i+1].getElementsByClassName("context")[0];
        if(Number(x.innerHTML) < Number(y.innerHTML)){
          s[i].parentNode.insertBefore(s[i+1],s[i]);
+         
+          
+         
           const ext=document.getElementsByClassName("ext");
             let count=1;
              for(let i=1;i<ext.length;i++){
                count++
               ext[i].innerHTML=count;
             }
+         
         }
         
       }
@@ -71,16 +79,33 @@ let r=10;
          r++;
          if(r>=1){
            profile.classList.remove("profiledup");
+            
           }
     }
 for(let i=0;i<s.length;i++){
-   s[i].addEventListener("click",()=>{
-         profile.innerHTML="NO UPDATES";
-         profile.classList.add("profiledup");
-        }); 
-      
- }
+  s[i].addEventListener("click",()=>{
+        let x=s[i].getElementsByClassName("context")[0];
+         let top=s[i].getElementsByClassName("drivers")[0];
+        let y=s[i+1].getElementsByClassName("context")[0];
+          let str=String(x.innerHTML);
+          let j=Math.floor((Number(y.innerHTML) / Number(x.innerHTML))*100);
+          let pk=Math.floor(Number(y.innerHTML)- Number(x.innerHTML));
+          chanses.innerHTML=j;
+          driver.innerHTML=top.innerHTML;
+         wd.innerHTML=pk;
+       data.classList.add("datadup");
         
+        });   
+ }
+      
+let gti=setInterval(hut,1000);
+let gt=0;
+function hut(){
+ gt++;
+  if(gt>=20){
+       data.classList.remove("datadup");
+   }
+}  
  
 const colo=document.getElementsByClassName("context");
 for(let i=0;i<colo.length;i++){
@@ -126,15 +151,18 @@ flash.addEventListener("click",()=>{
  aboutcontainer.classList.toggle("aboutdark");
  commentC.classList.toggle("commentCdark");
  btn.classList.toggle("btndark");
+ data.classList.remove("datadup");
 });
 const bt2=document.querySelector(".b2");
 const bt1=document.querySelector(".b1");
 bt2.addEventListener("click",()=>{
  profile.classList.add("profiledup");
+ data.classList.remove("datadup");
  profile.innerHTML="OPENING WHATSAPP";
 });
 bt1.addEventListener("click",()=>{
  profile.classList.add("profiledup");
+ data.classList.remove("datadup");
  profile.innerHTML="OPENING TELEGRAM";
 });
 
