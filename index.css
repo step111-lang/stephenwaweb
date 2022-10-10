@@ -68,6 +68,7 @@ font-size:12px;
             background:rgb(104, 104, 192);
             bottom: 0;
             display: flex;
+            flex-direction:column;
             align-items: center;
             justify-content: center;
 
@@ -180,7 +181,7 @@ width:100%;
 height:25%;
 background:white;
 position: absolute;
-bottom:130px;
+bottom:126px;
 border-radius:10px;
 overflow: hidden;
 z-index:;
@@ -229,7 +230,7 @@ font-weight:bold;
 font-style:italic;
 background:lightgray;
 margin-left:10px;
-margin-bottom:2%;
+margin-bottom:2vh;
 display:flex;
 align-items: center;
 padding:10px;
@@ -249,11 +250,12 @@ color:black;
 justify-content: center;
 }
 .subc{
-position: relative;
+position: absolute;
             margin: 20px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
         display:flex;
+       flex-direction: column;
         justify-content: center;
 }
  .delete{
@@ -455,7 +457,7 @@ background:linear-gradient(45deg,grey,white);
 }
 
 .profile{
-position:sticky;
+position: sticky;
 height:;
 width:250px;
 background:linear-gradient(45deg,lightblue,lightblue);
@@ -463,11 +465,13 @@ top:0;
 transform:translate(-50%,-50%)scale(0);
 top:-1%;
 left:50%;
-z-index:2;
+z-index:5;
 box-shadow:2px 3px 7px ;
 display:none;
 margin:auto;
+
 }
+
 .profiledup{
 position: absolute;
 transform:translate(-50%,-50%)scale(1);
@@ -503,5 +507,65 @@ opacity:60%;
 border-top:4px solid blue;
 border-radius:0px 0 10px  0px ;
 }
-
+.data{
+position: sticky;
+height:;
+width:250px;
+background:linear-gradient(45deg,lightblue,lightblue);
+top:0;
+transform:translate(-50%,-50%)scale(0);
+top-1%;
+left:50%;
+z-index:2;
+box-shadow:2px 3px 7px ;
+display:none;
+margin:auto;
+font-style:italic;
+}
+.datadup{
+position: absolute;
+transform:translate(-50%,-50%)scale(1);
+top:47%;
+display:block;
+font-size:20px;
+font-weight:bold;
+border-top:2px solid blue;
+}
+.chan{
+position: relative;
+display:flex;
+flex-direction:row;
+font-size:15px;
+font-style:italic;
+}
+.datadup::before{
+content:" ";
+position: absolute;
+height:100%;
+width:10px;
+background:blue;
+transform:translate(50%,-50%);
+top:50%;
+left:-6%;
+opacity:60%;
+border-radius: 0 0 0px   10px ;
+border-top:4px solid blue;
+}
+.datadup::after{
+content:" ";
+position: absolute;
+height:100%;
+width:10px;
+background:blue;
+transform:translate(50%,-50%);
+top:50%;
+right:-2%;
+opacity:60%;
+border-top:4px solid blue;
+border-radius:0px 0 10px  0px ;
+}
+.driver,.chances{
+color:blue;
+font-style:italic;
+}
     
