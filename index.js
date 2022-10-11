@@ -198,9 +198,6 @@ function time(){
      let y=s[i+1].getElementsByClassName("context")[0];
        if(Number(x.innerHTML) < Number(y.innerHTML)){
          s[i].parentNode.insertBefore(s[i+1],s[i]);
-         
-          
-         
           const ext=document.getElementsByClassName("ext");
             let count=1;
              for(let i=1;i<ext.length;i++){
@@ -250,7 +247,8 @@ function hut(){
    }
 }  
  
-const colo=document.getElementsByClassName("context");
+
+const colo=document.getElementsByClassName("company");
 for(let i=0;i<colo.length;i++){
    if(colo[i].innerHTML=="REDBULLS"){
       colo[i].parentNode.style.background="linear-gradient(rgba(20,230,230,1),navy)";
@@ -283,9 +281,24 @@ if(colo[i].innerHTML=="ALPHA ROMEO"){
 if(colo[i].innerHTML=="ALPINE"){
       colo[i].parentNode.style.background="linear-gradient(lightblue,rgba(230,23,230,0.7))";
      }
+if(colo[i].innerHTML==" "){
+      colo[i].parentNode.classList.add("dig");
+     }
+if(colo[i].innerHTML==""){
+      colo[i].parentNode.classList.add("dig");
+      
+     }
 
-
+if(colo[i].innerHTML==" COMPANY " || ""){
+      colo[i].parentNode.classList.add("dig");
+     }
+    if(colo[i].innerHTML=="CHELSEA"){
+      colo[i].parentNode.classList.add("dig");
+      
+     }
+ 
  }
+
 flash.addEventListener("click",()=>{
  profile.classList.add("profiledup");
  profile.innerHTML="LIGHT MODE TOGGLED";
