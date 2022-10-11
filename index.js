@@ -1,4 +1,7 @@
-const profile=document.querySelector(".profile");
+
+const ji=document.querySelector(".ji");
+const m=document.querySelector(".m");
+   const profile=document.querySelector(".profile");
 const wd=document.querySelector(".wd");
 const driver=document.querySelector(".driver");
 const data=document.querySelector(".data");
@@ -24,6 +27,7 @@ commentB.addEventListener("click",(e)=>{
   mql.appendChild(del);
   
 }
+
  var dels=document.getElementsByClassName("delete");
   for(let i=0;i<dels.length;i++){
    dels[i].addEventListener("click",()=>{
@@ -43,7 +47,6 @@ commentB.addEventListener("click",(e)=>{
   comment.value="";
  
 });
-
 var f1=[
 {
   context:"POINTS",
@@ -52,16 +55,16 @@ var f1=[
   date:"LATEST GP"
 },
 {
-  context:"366",
+  context:"319",
   company:"REDBULLS",
   drivers:"MAX-VERSTERPEN",
- date:"--p1"
+ date:"43--p1"
 },
 {
   context:"252",
   company:"REDBULLS",
   drivers:"SERGIO-PEREZ",
-  date:"--p"
+  date:"50--p2"
 },
 {
   context:"46",
@@ -178,14 +181,21 @@ var f1=[
   drivers:"NICOLAS-LATIFI"
 } 
  ];
+
+
 function gok(jok){
 let item="" ;
 for(let i=0;i<jok.length;i++){
  item+=`<div class="row"><div class="ext"></div><div class="context">${jok[i].context}</div><div class="company">${jok[i].company}</div> <div class="drivers">${jok[i].drivers}</div><div class="date">${jok[i].date}_</div></div>`;
 }
+
 return item;
 }
+ 
 document.querySelector(".instadv").innerHTML=`${gok(f1)}`;
+
+
+
 
 var timer=setInterval(time,1000);
 var t=10;
@@ -198,11 +208,14 @@ function time(){
      let y=s[i+1].getElementsByClassName("context")[0];
        if(Number(x.innerHTML) < Number(y.innerHTML)){
          s[i].parentNode.insertBefore(s[i+1],s[i]);
+         
+          
+         
           const ext=document.getElementsByClassName("ext");
-            let count=1;
+            let count=0;
              for(let i=1;i<ext.length;i++){
                count++;
-              ext[i].innerHTML=count;
+              ext[i].textContent=count;
             }
          
         }
@@ -213,7 +226,7 @@ function time(){
 }
 const tab=document.querySelector(".instadv");
 const s=tab.getElementsByClassName("row");
-const ti=setInterval(doj,2000);
+const ti=setInterval(doj,1000);
 let r=10;
    function doj(){
          r++;
@@ -222,6 +235,7 @@ let r=10;
             
           }
     }
+
 for(let i=0;i<s.length;i++){
   s[i].addEventListener("click",(e)=>{
         let x=s[i].getElementsByClassName("context")[0];
@@ -229,16 +243,16 @@ for(let i=0;i<s.length;i++){
         let y=s[i+1].getElementsByClassName("context")[0];
           let str=String(x.innerHTML);
           let j=Math.floor((Number(y.innerHTML) / Number(x.innerHTML))*100);
-          let pk=Math.floor(Number(y.innerHTML)- Number(x.innerHTML));
+          let pk=Math.floor(Number(x.innerHTML)- Number(y.innerHTML));
           chanses.innerHTML=j;
           driver.textContent=top.textContent;
          wd.innerHTML=pk;
        data.classList.add("datadup");
         
         });   
- }
+   }
       
-let gti=setInterval(hut,1000);
+let gti=setInterval(hut,2000);
 let gt=0;
 function hut(){
  gt++;
@@ -247,7 +261,6 @@ function hut(){
    }
 }  
  
-
 const colo=document.getElementsByClassName("company");
 for(let i=0;i<colo.length;i++){
    if(colo[i].innerHTML=="REDBULLS"){
@@ -321,4 +334,3 @@ bt1.addEventListener("click",()=>{
  data.classList.remove("datadup");
  profile.innerHTML="OPENING TELEGRAM";
 });
-
