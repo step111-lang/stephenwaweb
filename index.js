@@ -211,7 +211,7 @@ function time(){
           
          
           const ext=document.getElementsByClassName("ext");
-            let count=0;
+            let count=1;
              for(let i=1;i<ext.length;i++){
                count++;
               ext[i].textContent=count;
