@@ -43,6 +43,150 @@ commentB.addEventListener("click",(e)=>{
   comment.value="";
  
 });
+
+var f1=[
+{
+  context:"POINTS",
+  company:" COMPANY ",
+  drivers:"DRIVER",
+  date:"LATEST GP"
+},
+{
+  context:"366",
+  company:"REDBULLS",
+  drivers:"MAX-VERSTERPEN",
+ date:"--p1"
+},
+{
+  context:"252",
+  company:"REDBULLS",
+  drivers:"SERGIO-PEREZ",
+  date:"--p"
+},
+{
+  context:"46",
+  company:"ALPHA ROMEO",
+  drivers:"VETTALI-BOTTAS",
+  date:"_"
+},
+{
+  context:"180",
+  company:"MERCEDES BENZ",
+  drivers:"LEWIS-HAMILTON",
+  date:"_"
+},
+{
+  context:"68",
+  company:"ALPINE",
+  drivers:"FERNANDO-ALONSO",
+  date:"_"
+},
+{
+  context:"11",
+  company:"ALPHATAURI",
+  drivers:"YUKI-TSUNODA",
+  date:"_"
+},
+{
+  context:"23",
+  company:"ALPHATAURI",
+  drivers:"PIERRY-GASSLY",
+  date:"_"
+},
+{
+  context:"101",
+  company:"MUCLAREN",
+  drivers:"LANDO-NORIS",
+  date:"_"
+},
+{
+  context:"253",
+  company:"FERRARI",
+  drivers:"CHARLES-LECLER",
+ date:"_"
+},
+{
+  context:"12",
+  company:"HASS",
+  drivers:"KELVIN-SCHUMACKER",
+   date:"_"
+},
+{
+  context:"202",
+  company:"FERRARI",
+  drivers:"CARLOS-SAINZ",
+  date:"_"
+},
+{
+  context:"4",
+  company:"WILLIAMS",
+  drivers:"ALEX-ALBON",
+  date:"_"
+},
+{
+  context:"29",
+  company:"MUCLAREN",
+  drivers:"DANIEL-RICCARDO",
+  date:"_"
+},
+{
+  context:"203",
+  company:"MERCEDES BENZ",
+  drivers:"GEORGE-RUSSELL", 
+ date:"_"
+},
+{
+  context:"32",
+  company:"ASTO MARTIN",
+  drivers:"SEBASTIAN-VETTLE",
+  date:"_"
+},
+{
+  context:"78",
+  company:"ALPINE",
+  drivers:"ESTERBAN-OCON",
+  date:"_"
+},
+
+{
+  context:"12",
+  company:"ASTO MARTIN",
+  drivers:"STROLL",
+  date:"_"
+},
+{
+  context:"6",
+  company:"ALPHA ROMEO",
+  drivers:"ZHAU-ZHAU",
+ date:"_"
+},
+{
+  context:"22",
+  company:"HASS",
+  drivers:"KELVIN-MUGNASSEN",
+ date:"_"
+},
+{
+  context:"2",
+  company:"WILLIAMS",
+  drivers:"NICOLAS-LATIFI",
+  date:"_"
+},
+{
+  context:"0",
+  company:"WILLIAMS",
+  drivers:"NICOLAS-LATIFI"
+} 
+ ];
+function gok(jok){
+let item="" ;
+for(let i=0;i<jok.length;i++){
+ item+=`<div class="row"><div class="ext"></div><div class="context">${jok[i].context}</div><div class="company">${jok[i].company}</div> <div class="drivers">${jok[i].drivers}</div><div class="date">${jok[i].date}_</div></div>`;
+}
+return item;
+}
+document.querySelector(".instadv").innerHTML=`${gok(f1)}`;
+
 var timer=setInterval(time,1000);
 var t=10;
 function time(){
