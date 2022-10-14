@@ -35,8 +35,8 @@ commentB.addEventListener("click",(e)=>{
      dels[i].classList.add("jin"); 
      dels[i].innerHTML="DELETE";
       if(dels[i].innerHTML == "DELETE"){
-         dels[i].addEventListener("click",()=>{
-         dels[i].parentNode.remove();
+         dels[i].addEventListener("click",(e)=>{
+         e.target.parentNode.remove();
           });
         }
     
