@@ -1,5 +1,5 @@
-
-
+const ji=document.querySelector(".ji");
+const m=document.querySelector(".m");
    const profile=document.querySelector(".profile");
 const wd=document.querySelector(".wd");
 const driver=document.querySelector(".driver");
@@ -24,7 +24,7 @@ commentB.addEventListener("click",(e)=>{
   del.innerHTML="REPORT";
   del.setAttribute("class","delete");
   mql.appendChild(del);
-  
+  junk();
 }
 
  var dels=document.getElementsByClassName("delete");
@@ -333,3 +333,14 @@ bt1.addEventListener("click",()=>{
  data.classList.remove("datadup");
  profile.innerHTML="OPENING TELEGRAM";
 });
+
+
+function junk(){
+const commen=document.querySelector(".comment").value;
+var ar=["fuck","niggar","asshole","dick","motherfucker","niggro","bitch","dog","mai"];
+for(let i=0;i<ar.length;i++){
+ if(commen.toLowerCase().indexOf(ar[i]) > -1){
+   alert("BAD LANGUAGE !");
+  }
+}
+}
